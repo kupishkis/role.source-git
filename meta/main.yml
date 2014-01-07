@@ -1,0 +1,11 @@
+---
+dependencies:
+  - role: packages
+    packages:
+      - libcurl4-gnutils-dev
+      - libexpat1-dev
+      - gettext
+      - libz-dev
+      - libssl-dev
+      - build-essential
+

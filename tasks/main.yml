@@ -1,0 +1,19 @@
+---
+- name: aquire git source
+  shell: >
+    wget https://git-core.googlecode.com/files/git-{{git.version}}.tar.gz
+    chdir={{git.cache}}
+    creates={{git.cache}}/git-{{git.version}}.tar.gz
+
+- name: extract git source
+  shell: >
+    tar -zxf git-{{git.version}}.tar.gz
+    chdir={{git.cache}}
+    creates={{git.cache}}/git-{{git.version}}
+
+- name: compile git source
+  sudo: true
+  shell: >
+    make prefix=/usr/local all && make prefix=/usr/local install
+    chdir={{git.cache}}/git-{{git.version}}
+
