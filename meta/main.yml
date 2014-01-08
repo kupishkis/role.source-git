@@ -5,7 +5,7 @@ dependencies:
       - libcurl4-gnutls-dev
       - libexpat1-dev
       - gettext
-      - libz-dev
+      - zlib1g-dev
       - libssl-dev
       - build-essential
 
