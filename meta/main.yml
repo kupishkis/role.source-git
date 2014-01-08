@@ -2,6 +2,7 @@
 dependencies:
   - role: packages
     packages:
+      - wget
       - libcurl4-gnutls-dev
       - libexpat1-dev
       - gettext
