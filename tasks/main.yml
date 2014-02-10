@@ -1,13 +1,13 @@
 ---
 - name: aquire git source
   shell: >
-    wget https://git-core.googlecode.com/files/git-{{git.version}}.tar.gz
+    wget https://github.com/git/git/archive/v{{git.version}}.tar.gz
     chdir={{git.cache}}
-    creates={{git.cache}}/git-{{git.version}}.tar.gz
+    creates={{git.cache}}/v{{git.version}}.tar.gz
 
 - name: extract git source
   shell: >
-    tar -zxf git-{{git.version}}.tar.gz
+    tar -zxf v{{git.version}}.tar.gz
     chdir={{git.cache}}
     creates={{git.cache}}/git-{{git.version}}
 
